@@ -207,7 +207,7 @@ body {
         flex-wrap: wrap; 
         padding: 10px 15px;
     }
-    .app-header h1 {
+    .app-header p {
         width: 100%; 
         margin-bottom: 10px; 
         text-align: center;
