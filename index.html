@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Web</title>
+    <meta name="description" content="Create, Edit, View your code in any device through Code Web.">
+  <meta property="og:image" content="https://i.postimg.cc/4NymnTnc/favicon.png">
+  <meta property="og:title" content="Code Web">
+  <meta property="og:description" content="Create, Edit, View your code in any device through Code Web.">
+  <link rel="icon" href="favicon.ico" type="image/x-ico">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/material-darker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/addon/edit/closetag.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/addon/hint/show-hint.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <p>CODE WEB</p>
+        <div class="controls">
+            <button id="boilerplate-button" title="Insert HTML5 Boilerplate">Boilerplate</button>
+            <button id="open-button" title="Open Files (.html, .css, .js)">Open Files</button>
+            <button id="save-button" title="Save as HTML File">Save</button>
+            <input type="file" id="file-input" accept=".html,.css,.js" multiple style="display: none;">
+        </div>
+    </header>
+
+    <main class="editor-container">
+        <div class="code-pane">
+            <div class="editor-tabs">
+                <button class="tab-button active" data-editor="html">HTML</button>
+                <button class="tab-button" data-editor="css">CSS</button>
+                <button class="tab-button" data-editor="js">JavaScript</button>
+            </div>
+            <div class="editor-wrapper active" id="html-editor-wrapper">
+                <textarea id="html-code"></textarea>
+            </div>
+            <div class="editor-wrapper" id="css-editor-wrapper">
+                <textarea id="css-code"></textarea>
+            </div>
+            <div class="editor-wrapper" id="js-editor-wrapper">
+                <textarea id="js-code"></textarea>
+            </div>
+        </div>
+
+        <div class="resizer" id="drag-handle"></div>
+
+        <div class="preview-pane">
+            <label for="preview-frame">Preview</label>
+            <iframe style="transform: scale(0.9);" id="preview-frame" title="Live Preview"></iframe>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/addon/edit/closetag.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/addon/hint/xml-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/addon/hint/html-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/addon/hint/css-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/addon/hint/javascript-hint.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
