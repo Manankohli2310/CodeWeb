@@ -58,7 +58,7 @@ body {
     padding: 0 15px;
 }
 
-.app-header h1 {
+.app-header p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
